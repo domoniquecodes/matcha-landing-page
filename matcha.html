@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matcha</title>
+    <style>
+      body {
+        background: linear-gradient(
+          87.4deg,
+          rgb(255, 241, 165) 1.9%,
+          rgb(200, 125, 76) 49.7%,
+          rgb(83, 54, 54) 100.5%
+        );
+        color: aliceblue;
+      }
+
+      h1 {
+        text-align: center;
+        color: #b97449;
+      }
+
+      h2 {
+        text-align: center;
+        border: 1px solid #b97449;
+        border-radius: 4px;
+        padding: 15px;
+        color: #a8d47f;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        line-height: 1.5;
+        padding: 20px;
+      }
+
+      a {
+        font-weight: bold;
+        color: #84c9e9;
+        padding-bottom: 20px;
+      }
+
+      .learn-more {
+        display: block;
+        margin: 10px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 20px 30px;
+        font-size: 18px;
+        color: black;
+        background-color: #a8d47f;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        padding: 5px 70px 5px 70px;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+        background: linear-gradient(to right, #434343 0%, black 100%);
+      }
+
+      .matcha-treats {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .matcha-info {
+        font-size: 18px;
+      }
+
+      .matcha-list {
+        font-size: 18px;
+        padding-bottom: 20px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>All About Matcha</h1>
+      <span>
+        <h2>What is Matcha?</h2>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/882/original/MatchaProjectImage.jpg?1699898086"
+          alt="Matcha Tea"
+        />
+
+        <p class="matcha-info">
+          <em>Matcha</em> is finely ground powder of specially grown and
+          processed <strong>green tea leaves</strong> originating in China
+          traditionally consumed in East Asia. It is mostly produced in Japan
+          today. The green tea plants used for matcha are shade-grown for three
+          to four weeks before harvest; the stems and veins are removed during
+          processing. During shaded growth, the plant Camellia sinensis produces
+          more theanine and caffeine. The powdered form of matcha is consumed
+          differently from tea leaves or tea bags, as it is suspended in a
+          liquid, typically water or milk.
+        </p>
+        <a
+          href="https://en.wikipedia.org/wiki/Matcha"
+          target="_blank"
+          class="learn-more"
+        >
+          Learn more on Wikipedia</a
+        >
+
+        <h2>Matcha Treat Favorites</h2>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/288/original/Matcha-brownies-1010654.1.1.jpg?1700276884"
+          alt="Matcha Tea Treats"
+        />
+        <p class="matcha-treats">Here are Some of My Favorite Matcha Treats:</p>
+
+        <ul class="matcha-list">
+          <li>Matcha Tea Lattes</li>
+          <li>Matcha Ice Cream</li>
+          <li>Matcha Brownies</li>
+        </ul>
+
+        <a
+          href="https://www.spatuladesserts.com/top-25-best-matcha-desserts/"
+          target="_blank"
+          class="learn-more"
+        >
+          See More Treats Here!</a
+        >
+        <button class="buy-button">🍵 Buy Matcha</button>
+      </span>
+      <hr />
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/domonique-wilson-m-ed-0b661a82/ "
+          target="_blank"
+        >
+          Domonique Wilson
+        </a>
+        <br />
+        <small><em>with HTML, CSS, and Javascript</em></small>
+      </p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+
+        if (name.length === 0 || email.length === 0) {
+          alert("Thank you for visiting friend! Drink alot of matcha! 😃🍵");
+        } else {
+          alert(
+            "Thank you " +
+              name +
+              "! We'll be in touch by email, meanwhile have alot of matcha! " +
+              "😃🍵"
+          );
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
